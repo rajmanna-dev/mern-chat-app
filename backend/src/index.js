@@ -12,6 +12,7 @@ import { app, server } from './lib/socket.js';
 dotenv.config();
 const PORT = process.env.PORT;
 
+app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
@@ -19,8 +20,6 @@ app.use(
     credentials: true,
   })
 );
-
-app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);

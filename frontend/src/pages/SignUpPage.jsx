@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import toast from 'react-hot-toast';
 import { useAuthStore } from '../store/useAuthStore.js';
 import AuthImagePattern from '../components/AuthImagePattern';
 
@@ -13,7 +13,6 @@ import {
   MessageSquare,
   User,
 } from 'lucide-react';
-import toast from 'react-hot-toast';
 
 function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,7 +38,6 @@ function SignUpPage() {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     const success = validateForm();
     if (success === true) signup(formData);
   };
