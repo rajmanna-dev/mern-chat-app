@@ -45,12 +45,12 @@ function SignUpPage() {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       {/* left side */}
-      <div className="flex flex-col items-center justify-center p-6 sm:p-12">
+      <div className="flex flex-col items-center justify-center p-6 sm:p-20">
         <div className="w-full max-w-md space-y-8">
           {/* LOGO */}
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">
-              <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <MessageSquare className="size-6 text-primary" />
               </div>
               <h1 className="mt-2 text-2xl font-bold">Create Account</h1>
