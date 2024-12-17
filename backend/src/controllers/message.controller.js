@@ -59,7 +59,7 @@ export const sendMessage = async (req, res) => {
 
     // TODO: Realtime chat functionality
     const receiverSocketId = getReceiverSocketId(receiverId);
-    if (receiverId) {
+    if (receiverSocketId) {
       io.to(receiverSocketId).emit('newMessage', newMessage);
     }
 
